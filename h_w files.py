@@ -1,7 +1,4 @@
 # объединение файлов (вариант_1)
-# file_1 = '1.txt'
-# file_2 = '2.txt'
-# file_3 = '3.txt'
 
 file_for_writing = []
 sum_line = {}
@@ -41,23 +38,9 @@ for line in sorted_sum_line.values():
     file_for_writing += line
 print(file_for_writing)
 
+# если ВЫ не создавали в директории файл для записи
 with open('file_finish.txt', 'x') as f:
     f.writelines(file_for_writing)
-
-
-
-# def merging_files(file_for_writing: str, base_path, location):
-#     files = []
-#     for i in list(os.listdir(os.path.join(base_path, location))):
-#         files.append([accounting(os.path.join(base_path, location, i)), os.path.join(base_path, location, i), i])
-#     for file_from_list in sorted(files):
-#         opening_files = open(file_for_writing, 'a')
-#         opening_files.write(f'{file_from_list[2]}\n')
-#         opening_files.write(f'{file_from_list[0]}\n')
-#         with open(file_from_list[1], 'r', encoding='utf-8') as file:
-#             counting = 1
-#             for line in file:
-#                 opening_files.write(f'строка № {counting} в файле {file_from_list[2]} : {line}')
-#                 counting += 1
-#         opening_files.write(f'\n')
-#         opening_files.close()
+# если ВАМИ уже создан  итоговый файл, не обращайте внимание на ошибку
+with open('file_finish.txt', 'w') as f:
+    f.writelines(file_for_writing)

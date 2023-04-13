@@ -36,7 +36,7 @@ def get_shop_list_by_dishes(dishes, person_count, cook_book):
 
 
 person_count = 3
-dishes = ['Омлет', 'Фахитос', 'Сельдь под шубой', 'Запеченный картофель']
+dishes = ['Омлет', 'Фахитос', 'Маленький мальчик', 'Запеченный картофель']
 cook_book = read_recipes()
 print(read_recipes())
 print()
